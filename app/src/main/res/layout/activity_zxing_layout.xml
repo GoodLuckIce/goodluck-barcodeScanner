@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/zxing_barcode_scanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:zxing_preview_scaling_strategy="centerCrop"
+        app:zxing_use_texture_view="true"
+        app:zxing_scanner_layout="@layout/custom_barcode_scanner"
+        app:zxing_framing_rect_width="200dp"
+        app:zxing_framing_rect_height="200dp"/>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true"/>
+
+    <TextView android:id="@+id/zxing_status_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        android:background="@color/zxing_transparent"
+        android:text="@string/zxing_msg_default_status"
+        android:textColor="@color/zxing_status_text"/>
+
+    <Button
+        android:id="@+id/xiangce"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="90dp"
+        android:layout_gravity="center"
+        android:background="@drawable/xiangce"
+        android:text="" />
+
+    <Button
+        android:id="@+id/shoudiantong"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="90dp"
+        android:layout_gravity="center"
+        android:background="@drawable/shoudiantong"
+        android:text="" />
+</FrameLayout>
